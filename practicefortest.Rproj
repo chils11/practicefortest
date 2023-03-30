@@ -1,13 +1,10 @@
-Version: 1.0
+ufo <- read.csv("ufo.csv")
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
+str(ufo)
+head(ufo, 15)
+nrow(ufo)
 
-EnableCodeIndexing: Yes
-UseSpacesForTab: Yes
-NumSpacesForTab: 2
-Encoding: UTF-8
+formatted_new_dates <- as.Date(ufo$datetime, format = "%m/%d/%Y")
+str(formatted_new_dates)
+class(formatted_new_dates)
 
-RnwWeave: Sweave
-LaTeX: pdfLaTeX
